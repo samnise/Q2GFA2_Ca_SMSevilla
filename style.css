@@ -1,0 +1,94 @@
+* {margin: 0;}
+
+header {display: hidden}
+
+body {
+    background-image: url(galaxybg.jpg);
+    background-size: 1500px 1500px;
+    overflow: hidden;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    display: inline-block;
+}
+
+section #banner {
+    position: relative;
+    z-index: 80
+}
+
+#banner h1 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(42, 42, 167);
+    font-size: xx-large;
+    z-index: 200;
+    text-align: center;
+    margin-top: 20%;
+    padding: 2%;
+    width: 100%;
+    background: rgba(48, 47, 47, 0.596);
+
+}
+
+.bodies {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 90;
+}
+
+#ast {
+    background-image: url(gifs/asteroid.gif);
+    width: 200px;
+    height: 200px;
+    animation: asteroidmotion 20s linear infinite;
+}
+
+#gal {
+    background-image: url(gifs/galaxy.gif);
+    width: 100px;
+    height: 100px;
+    left: 70vw;
+    bottom: 50vh;
+    animation: galaxygrow 50s;
+}
+
+#isl {
+    background-image: url(gifs/islands.gif);
+    width: 250px;
+    height: 250px;
+    left: 40vw;
+    bottom: 5vh;
+    animation: islandsmotion 50s linear infinite;
+}
+
+#ice {
+    background-image: url(gifs/iceworld.gif);
+    width: 256px;
+    height: 256px;
+    position: absolute;
+    animation: iceworldmotion 5s linear infinite;
+}
+
+@keyframes asteroidmotion {
+    from {transform:translate(-5vw,40vh);}
+    to {transform:translate(20vw,-85vh);}
+}
+
+@keyframes galaxygrow {
+    0% {transform: scale(0.5);}
+    100% {transform: scale(6);}
+}
+
+@keyframes islandsmotion {
+    from {transform: rotate(120deg);}
+    to {transform: rotate(90deg);}
+}
+@keyframes iceworldmotion {
+    from {transform: scale(0.1) translate(-35vw,25vh);}
+    to {transform: scale(2.5) translate(20vw,-50vh);}
+}
